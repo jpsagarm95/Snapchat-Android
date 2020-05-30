@@ -20,7 +20,8 @@
         </activity>
         <activity android:name=".SnapsActivity" />
         <activity android:name=".CreateSnapActivity" />
-        <activity android:name=".ChooseUserActivity"></activity>
+        <activity android:name=".ChooseUserActivity" />
+        <activity android:name=".ViewSnapActivity"></activity>
     </application>
 
 </manifest>
