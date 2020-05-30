@@ -42,8 +42,6 @@ class CreateSnapActivity : AppCompatActivity() {
         bitmap.compress(Bitmap.CompressFormat.JPEG, 100, baos)
         val data = baos.toByteArray()
 
-
-
         val uploadTask = FirebaseStorage.getInstance().getReference().child("images").child(imageName).putBytes(data)
         uploadTask.addOnFailureListener(OnFailureListener {
             // Handle unsuccessful uploads
@@ -52,6 +50,12 @@ class CreateSnapActivity : AppCompatActivity() {
             // taskSnapshot.getMetadata() contains file metadata such as size, content-type, etc.
             val downloadUrl = taskSnapshot.downloadUrl
             Log.i("Info", downloadUrl.toString())
+
+            val intent = Intent(this, ChooseUserActivity::class.java)
+            intent.putExtra("imageURL", downloadUrl.toString())
+            intent.putExtra("imageName", imageName)
+            intent.putExtra("message", messageEditText?.text.toString())
+            startActivity(intent)
         })
     }
 

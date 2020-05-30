@@ -19,7 +19,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".SnapsActivity" />
-        <activity android:name=".CreateSnapActivity"></activity>
+        <activity android:name=".CreateSnapActivity" />
+        <activity android:name=".ChooseUserActivity"></activity>
     </application>
 
 </manifest>

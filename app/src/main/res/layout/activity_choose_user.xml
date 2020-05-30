@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.myappcompany.sjp.snapchat.SnapsActivity">
+    tools:context="com.myappcompany.sjp.snapchat.ChooseUserActivity">
 
     <ListView
-        android:id="@+id/snapsListView"
+        android:id="@+id/chooseUserListView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
